@@ -6,6 +6,15 @@
 #include "spinlock.h"
 #include "proc.h"
 
+
+// mosioc hello system call Implementation
+uint64
+sys_hello(void) 
+{     
+printf("Hello world\n");     
+return 12;  
+} 
+
 uint64
 sys_exit(void)
 {
