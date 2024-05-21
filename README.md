@@ -6,7 +6,7 @@ This guide explains how to add a new system call to the xv6 RISC-V operating sys
 
 - Basic understanding of C programming
 - Familiarity with operating system concepts
-- A working xv6 development environment on RISC-V
+- A working [xv6](https://github.com/mit-pdos/xv6-riscv) development environment on RISC-V
 
 ## Steps to Add a System Call
 
