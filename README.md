@@ -1,4 +1,4 @@
-# Adding a System Call to xv6 RISC-V
+# Adding a System Call to xv6 RISC-V OS 
 
 This guide explains how to run the xv6 RISC-V operating system on Linux and add a new system call to it. xv6 is a simple Unix-like educational operating system developed at MIT. Download full report [here](https://github.com/mosioc/xv6-System-Call-and-Driver/blob/main/xv6-project-report-mehdi-maleki.pdf). 
 
