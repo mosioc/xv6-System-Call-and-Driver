@@ -1,12 +1,51 @@
 # Adding a System Call to xv6 RISC-V
 
-This guide explains how to add a new system call to the xv6 RISC-V operating system. xv6 is a simple Unix-like teaching operating system developed at MIT. 
+This guide explains how to run the xv6 RISC-V operating system on Linux and add a new system call to it. xv6 is a simple Unix-like educational operating system developed at MIT.
 
 ## Prerequisites
 
 - Basic understanding of C programming
 - Familiarity with operating system concepts
 - A working [xv6](https://github.com/mit-pdos/xv6-riscv) development environment on RISC-V
+
+Ensure you have the following installed on your Linux distribution:
+- `git`
+- `qemu`
+- `gcc` (with RISC-V support)
+- `make`
+## Setting Up xv6 RISC-V on Linux
+### xv6 Installation Steps
+
+1. **Clone the Repository**
+
+```bash
+   git clone https://github.com/mit-pdos/xv6-riscv.git
+   cd xv6-riscv
+```
+2. **Install RISC-V Toolchain**
+
+Follow the instructions [here](https://github.com/riscv/riscv-gnu-toolchain) to install the RISC-V GNU toolchain. If you don't want to download a lot of files, installing the following is enough: 
+
+Debian or Ubuntu:
+```bash
+   sudo apt-get install git build-essential gdb-multiarch qemu-system-misc gcc-riscv64-linux-gnu binutils-riscv64- 
+   linux-gnu 
+   ```
+Arch:
+```bash
+   sudo pacman -S riscv64-linux-gnu-binutils riscv64-linux-gnu-gcc riscv64-linux-gnu-gdb qemu-emulators-full
+```
+3. **Build the xv6 Kernel**
+
+```bash
+   make
+```
+4. **Run xv6 using QEMU**
+
+```bash
+   make
+   make qemu
+```
 
 ## Steps to Add a System Call
 
@@ -19,11 +58,13 @@ First, decide on the name and functionality of the new system call. For this exa
 Edit the `kernel/syscall.h` file to add a new system call number. Append the new system call number to the list of existing system calls.
 
 ```c
+//
 ...
 
 #define SYS_helloworld  22 // Assign an unused number
 
 ...
+//
 ```
 
 ### 3. Declare the System Call Function
