@@ -19,8 +19,8 @@ Ensure you have the following installed on your Linux distribution:
 1. **Clone the Repository**
 
 ```bash
-   git clone https://github.com/mit-pdos/xv6-riscv.git
-   cd xv6-riscv
+git clone https://github.com/mit-pdos/xv6-riscv.git
+cd xv6-riscv
 ```
 2. **Install RISC-V Toolchain**
 
@@ -28,23 +28,22 @@ Follow the instructions [here](https://github.com/riscv/riscv-gnu-toolchain) to 
 
 Debian or Ubuntu:
 ```bash
-   sudo apt-get install git build-essential gdb-multiarch qemu-system-misc gcc-riscv64-linux-gnu binutils-riscv64- 
-   linux-gnu 
+sudo apt-get install git build-essential gdb-multiarch qemu-system-misc gcc-riscv64-linux-gnu binutils-riscv64 linux-gnu 
    ```
 Arch:
 ```bash
-   sudo pacman -S riscv64-linux-gnu-binutils riscv64-linux-gnu-gcc riscv64-linux-gnu-gdb qemu-emulators-full
+sudo pacman -S riscv64-linux-gnu-binutils riscv64-linux-gnu-gcc riscv64-linux-gnu-gdb qemu-emulators-full
 ```
 3. **Build the xv6 Kernel**
 
 ```bash
-   make
+make
 ```
 4. **Run xv6 using QEMU**
 
 ```bash
-   make
-   make qemu
+make
+make qemu
 ```
 
 ## Steps to Add a System Call
