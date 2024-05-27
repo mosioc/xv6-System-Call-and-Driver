@@ -254,7 +254,6 @@ static uint64 (*syscalls[])(void) = {
 ```
 Add a user space interface for the system call.
 ```c
-Copy code
 int rtcdate(struct rtcdate *r) {
     return syscall(SYS_rtcdate, r);
 }
@@ -262,7 +261,6 @@ int rtcdate(struct rtcdate *r) {
 Implement the user space interface in usys.pl.
 
 ```c
-Copy code
 entry("rtcdate")
 7. Test the RTC Driver
 ```
@@ -284,8 +282,6 @@ int main(void) {
 ```
 Add the new test program to the Makefile to compile it.
 ```c
-Makefile
-Copy code
 # In Makefile...
 U_PROGS=\
     ... \
