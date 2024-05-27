@@ -262,8 +262,8 @@ Implement the user space interface in usys.pl.
 
 ```c
 entry("rtcdate")
-7. Test the RTC Driver
 ```
+7. Test the RTC Driver
 Create a user program to test the RTC functionality.
 
 ```c
